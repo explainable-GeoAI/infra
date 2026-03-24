@@ -1,0 +1,11 @@
+services:
+  postgres:
+    environment:
+      - POSTGRES_USER=geoai
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:?POSTGRES_PASSWORD environment variable is required}
+      - POSTGRES_DB=geoai
+    deploy:
+      resources:
+        limits:
+          cpus: '3'
+          memory: 5G

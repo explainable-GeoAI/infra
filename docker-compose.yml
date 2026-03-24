@@ -1,0 +1,15 @@
+services:
+  postgres:
+    container_name: postgres
+    hostname: postgres
+    build: ./postgres/
+    platform: linux/amd64
+    restart: unless-stopped
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/
+    networks:
+      - geoai-platform-network
+
+networks:
+  geoai-platform-network:
+    driver: bridge
