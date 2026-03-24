@@ -1,0 +1,15 @@
+services:
+  postgis:
+    container_name: postgis-1
+    hostname: postgis
+    build: ./postgis/
+    platform: linux/amd64
+    restart: unless-stopped
+    volumes:
+      - ./postgis_data:/var/lib/postgresql/
+    networks:
+      - geoai-platform-network
+
+networks:
+  geoai-platform-network:
+    driver: bridge
