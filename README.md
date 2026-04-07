@@ -32,3 +32,14 @@ POSTGRES_PASSWORD
 POSTGRES_DB
 ```
 should be set (otherwise they all default to `geoai`).
+
+## pgAdmin
+
+pgAdmin is provided as lightweight PostgreSQL admin tool. 
+In dev mode, pgadmin is available on host port 8080, container port 80 otherwise.
+
+Admin credentials for pgadmin are configured via the env variables
+```
+PGADMIN_EMAIL (default: admin@admin.com)
+PGADMIN_PASSWORD (default: admin)
+```
