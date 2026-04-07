@@ -9,3 +9,14 @@ services:
         limits:
           cpus: '3'
           memory: 5G
+  pgadmin:
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=${PGADMIN_EMAIL:-admin@admin.com}
+      - PGADMIN_DEFAULT_PASSWORD=${PGADMIN_PASSWORD:-admin}
+    ports:
+      - 8080:80
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 512M
