@@ -7,7 +7,7 @@ There are two 'modes' to run it: Either in development mode or for deployment on
 To start it in development mode, run:
 
 ```sh
-docker compose -f docker-compose.yml -f docker-compose.prod.yml up
+docker compose -f docker-compose.yml -f docker-compose.dev.yml up
 ```
 
 For deployment use:
